@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DevJuniors, registro de información</title>
+        <title>DSIJuniors, registro de información</title>
         <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/register.css">
     </head>
-    <body>
-        <header>
+    <body class="body-register">
+        <header class="header-register">
             <span class="logo">
-                <a class="linker" href="./index.html"><span class="logo-1">Dev</span><span class="logo-2">Juniors</span></a>
+                <a class="linker" href="./index.html"><span class="logo-1">DSI</span><span class="logo-2">Juniors</span></a>
             </span>
             <nav class="navigator">
                 <ul class="navigator-list">
@@ -21,71 +22,83 @@
                 </ul>
             </nav>
         </header>
-        <main class="main_register">
-            <div class="main_register--wrapper">
-                <h1>Regístrate en DevJuniors!</h1>
-                <form class="form__register" action="/">
-                    <div class="form__register--1">
-                        <div class="form__register--rigth">
-                            <div>
-                                <p>Años de experiencia en el rubro:</p>
-                                <input type="radio" id="first" name="year_exp" value="primero">
-                                <label for="first">Menor a 1 año o primera experiencia laboral</label><br>
-                                <input type="radio" id="second" name="year_exp" value="segundo">
-                                <label for="second">de 1 a 2 años</label><br>
-                                <input type="radio" id="third" name="year_exp" value="tercero">
-                                <label for="third">de 2 a 3 años</label>
-                            </div>
-                            <div>
-                                <p>Rubro a especializarse:</p>
-                                <input type="radio" id="frontend_dev" name="especialization" value="frontend">
-                                <label for="frontend_dev">Frontend Developer</label><br>
-                                <input type="radio" id="backend_dev" name="especialization" value="backend">
-                                <label for="backend_dev">Backend Developer</label><br>
-                                <input type="radio" id="data_scientist" name="especialization" value="datasc">
-                                <label for="data_scientist">Data Scientist</label>
-                            </div>
-                            <div class="language_r">
-                                <p>Lenguajes de programación:</p>
-                                <input type="radio" id="javascript" name="fav_language" value="Javascript">
-                                <label for="javascript">Javascript</label><br>
-                                <input type="radio" id="java" name="fav_language" value="Java">
-                                <label for="java">Java</label><br>
-                                <input type="radio" id="net" name="fav_language" value=".Net">
-                                <label for="net">.Net</label>
-                                <input type="radio" id="python" name="fav_language" value="Python">
-                                <label for="python">Python</label>
-                                <input type="radio" id="php" name="fav_language" value="PHP">
-                                <label for="php">PHP</label>
-                            </div>
-                        </div>
-                        <div class="form__register--left">
-                            <label for="rname" class="register__label--1">
-                                <p>Nombre:</p>
-                                <input type="text" id="rname" name="rname"  class="r_name" placeholder="Nombre" autocomplete="name" required>
-                            </label>
-                            <label for="remail" class="register__label--2">
-                                <p>Correo:</p>
-                                <input type="email" id="remail" name="remail" class="r_email" placeholder="Email" autocomplete="on" required>
-                            </label>
-                            <label for="rtelefono" class="register__label--3">
-                                <p>Telefono / Celular:</p>
-                                <input type="tel" id="rtelefono" name="rtelefono" class="r_telephone" placeholder="Teléfono / Celular" autocomplete="on" required>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form__register--2">
-                        <label for="r_area" class="register__textarea--label"></label>
-                        <textarea class="text-area__register" name="r_area" id="r_area" cols="60" rows="6" placeholder="Dejame un mensaje" required></textarea>
-                    </div>
-                    <div class="btn_register--container">
-                        <button class="btn_register">Enviar!</button>
-                    </div>
-                </form>
-            </div>
+
+        <main class="register-container main_register">
+
+            <h1>Registro de Usuario</h1>
+
+            <form class="form__register" id="formRegister">
+
+                <h2>Datos personales</h2>
+                <input type="text" name="nombre" placeholder="Nombres" required>
+                <input type="text" name="apellido" placeholder="Apellidos" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+
+                <div class="section-divider"></div>
+
+                <h2>Credenciales</h2>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="password" name="password2" placeholder="Confirmar contraseña" required>
+
+                <div class="section-divider"></div>
+
+                <h2>Tipo de cuenta</h2>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" id="tipo_dev" name="tipoCuenta" value="Desarrollador" checked>
+                        Desarrollador
+                    </label>
+                    <label>
+                        <input type="radio" id="tipo_emp" name="tipoCuenta" value="Empresa">
+                        Empresa
+                    </label>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <div class="register-dev">
+
+                    <h2>Información del Desarrollador</h2>
+
+                    <p>Años de experiencia:</p>
+                    <label><input type="radio" name="experiencia"> Menor a 1 año</label>
+                    <label><input type="radio" name="experiencia"> 1 a 2 años</label>
+                    <label><input type="radio" name="experiencia"> 2 a 3 años</label>
+
+                    <p>Especialización:</p>
+                    <label><input type="radio" name="especializacion"> Frontend</label>
+                    <label><input type="radio" name="especializacion"> Backend</label>
+                    <label><input type="radio" name="especializacion"> Fullstack</label>
+
+                    <p>Lenguajes:</p>
+                    <label><input type="checkbox"> JavaScript</label>
+                    <label><input type="checkbox"> Java</label>
+                    <label><input type="checkbox"> Python</label>
+                    <label><input type="checkbox"> PHP</label>
+
+                    <textarea placeholder="Déjame un mensaje"></textarea>
+                </div>
+
+                <div class="register-company">
+
+                    <h2>Información de la Empresa</h2>
+                    <input type="text" placeholder="Nombre de la empresa">
+                    <input type="text" placeholder="RUC">
+                    <input type="text" placeholder="Sector / Rubro">
+                    <input type="text" placeholder="Persona de contacto">
+
+                    <textarea placeholder="Describe tu empresa o necesidad"></textarea>
+                </div>
+
+                <button type="submit" class="btn_register" id="btnRegister">Registrarse</button>
+
+            </form>
         </main>
-        <footer>
-            <header>
+
+
+
+        <footer class="footer-register">
+            <!--<header>
                 <nav class="navigator">
                     <ul class="navigator-list">
                         <li class="navigator-item"><a href="./index.html">Inicio</a></li>
@@ -95,7 +108,7 @@
                         <li class="navigator-item"><a href="./blog.html">Blog</a></li>
                     </ul>
                 </nav>
-            </header>
+            </header>-->
             <div class="social">
                 <div class="social-container">
                     <figure class="social-item">
@@ -121,8 +134,10 @@
                 </div>
             </div>
             <div class="end">
-                <span>Desarrollado por &copy;DevJuniors  2024</span>
+                <span>Desarrollado por &copy;DSIJuniors  2025</span>
             </div>
         </footer>
+        <script src="./JS/interactive.js"></script>
+        <script src="./JS/login-register.js"></script>
     </body>
 </html>

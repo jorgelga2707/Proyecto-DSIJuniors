@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>DSIJuniors | Perfil</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="CSS/perfil.css">
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="logo">DSIJuniors</div>
+            <nav class="menu">
+                <a href="dashboard.html">Dashboard</a>
+                <button id="logout">Cerrar sesión</button>
+            </nav>
+        </header>
+
+        <main class="perfil-container">
+            <div class="perfil-card">
+                <h1 class="titulo">Mi Perfil</h1>
+
+                <form id="perfilForm">
+
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input type="text" id="apellido">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" disabled>
+                    </div>
+                    <section id="extraPerfil"></section>
+                    <button type="submit" class="btn-guardar">Guardar cambios</button>
+
+                </form>
+            </div>
+        </main>
+        <script src="JS/perfil.js"></script>
+    </body>
+</html>

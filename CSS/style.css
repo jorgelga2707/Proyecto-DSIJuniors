@@ -14,13 +14,13 @@ body{
     background: linear-gradient(90deg, hsl(216, 21%, 24%) 0%, hsl(220, 33%, 2%) 100%);
 }
 
-/*****Encabezado*******/
-
 header{
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
+    background: transparent;
+    transition: 0.5s ease-in-out;
 }
 
 .logo{
@@ -225,7 +225,6 @@ header{
     height: 95%;
 }
 
-/*******Estilos testimonios********/
 .testimony{
     width: 100%;
     height: 500px;
@@ -284,8 +283,6 @@ header{
     font-weight: bolder;
     margin: 10px 0;
 }
-
-/*******Footer*******/
 
 footer{
     width: 100%;
@@ -346,8 +343,6 @@ footer header .navigator{
     margin: 5px 0 0 0;
     padding: 0 0 10px 0;
 }
-
-/* section contact */
 
 .contact{
     width: 83%;
@@ -442,7 +437,7 @@ footer header .navigator{
 
 .body-login{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -450,21 +445,22 @@ footer header .navigator{
 
 .main-login{
     width: 100%;
-    height: calc(100vh - 289.2px);
+    height: auto;
     display: flex;
 }
 
 .login-img-container{
     width: 50%;
-    height: 100%;
+    height: auto;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
 }
 
 .login-img-container img{
-    width: 65%;
-    height: 80%;
+    width: 300px;
+    height: 300px;
     border-radius: 20px;
 }
 
@@ -552,12 +548,16 @@ footer header .navigator{
     color: #0000FF;
 }
 
-/*****************Estilos registro*****************/
+.footer-login{
+    padding: 20px 0;
+}
 
 .main_register{
     width: 100%;
-    height: calc(100vh - 289.2px);
+    height: auto;
+    margin: 80px 0 0 0  ;
     display: flex;
+    flex: 1;
     justify-content: center;
 }
 
@@ -644,12 +644,16 @@ footer header .navigator{
     border-color: #00FF00;
 }
 
-/*****************Estilos empresa*****************/
+.footer-register{
+    padding: 20px 0;
+    margin: 0;
+}
 
 .main_empresa{
     width: 100%;
-    height: calc(100vh - 289.2px);
+    height: auto;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
 }
@@ -671,8 +675,8 @@ footer header .navigator{
 }
 
 .empresa_left--container img{
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     border-radius: 15px;
 }
 
@@ -702,23 +706,53 @@ footer header .navigator{
     color: #0000FF;
 }
 
+.footer-empresa{
+    padding: 20px 0;
+    position: absolute ;
+    margin: 0;
+    bottom: 0;
+}
 
-/*****************Estilos desarrollador*****************/
+.footer-developer{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 20px 0;
+}
 
 .main_developer{
     width: 100%;
-    height: calc(100vh - 289.2px);
+    height: auto;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
 }
 
-/*****************Estilos blog*****************/
+.footer-developer header{
+    height: auto;
+}
+
+.footer-developer.social{
+    height: 50px;
+}
+
+.footer-developer .end{
+    padding-bottom: 5px;
+}
+
+.main_developer .empresa_left--container img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
 
 .main_blog{
     width: 100%;
-    height: calc(100vh - 289.2px);
+    height: auto;
+    margin-top: 80px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -808,17 +842,24 @@ footer header .navigator{
     margin-left: 50px;
 }
 
-.header{
+.header, .header-blog, .header-register {
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 1000;
+}
+
+.header-blog, .header-register{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    transition: 0.5s ease-in-out;
 }
 
 .active{
     background: rgba(0,0,0,0.9);
 }
-
-/*******CAROUSEL******/
 
 .carousel {
     width: 80%;
@@ -868,4 +909,64 @@ footer header .navigator{
 
 .carousel-nav button:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 18px 0;
+    flex-wrap: wrap;
+}
+
+.captcha-container canvas {
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.captcha-container input {
+    width: 160px;
+    height: 42px;
+    border-radius: 20px;
+    border: none;
+    padding: 0 14px;
+    font-size: 14px;
+    outline: none;
+}
+
+.captcha-container button {
+    height: 42px;
+    padding: 0 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.captcha-container button:hover {
+    background: #ff3b3b;
+    color: #fff;
+}
+
+.header-login {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-login.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }

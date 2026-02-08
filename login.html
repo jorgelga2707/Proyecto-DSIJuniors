@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DevJuniors Login</title>
-        <link rel="stylesheet" href="./styles/style.css">
+        <title>DSIJuniors Login</title>
+        <link rel="stylesheet" href="./CSS/style.css">
     </head>
     <body class="body-login">
-        <header>
+        <header class="header-login">
             <span class="logo">
-                <a class="linker" href="./index.html"><span class="logo-1">Dev</span><span class="logo-2">Juniors</span></a>
+                <a class="linker" href="./index.html"><span class="logo-1">DSI</span><span class="logo-2">Juniors</span></a>
             </span>
             <nav class="navigator">
                 <ul class="navigator-list">
@@ -28,16 +28,17 @@
             <div class="login__form--submit">
                 <div class="login__form--wrapper">
                     <p class="initial-register">Elige si eres una empresa o desarrollador!, en caso de no estar registrado <a href="./registro.html">haz click aquí</a> para registrate.</p>
-                    <form class="login__form" action="/">
+                    <form class="login__form" id="formLogin">
                         <label for="festado" class="form__label--1">
-                            <input list="estado" placeholder="empresa / desarrollador" id="festado" name="festado" class="estado-1" autocomplete="on" required>
-                            <datalist id="estado">
-                                <option value="Desarrollador"></option>
-                                <option value="Empresa"></option>
-                            </datalist>
+                            <!--<input list="estado" placeholder="empresa / desarrollador" id="festado" name="festado" class="estado-1" autocomplete="on" required>-->
+                            <select id="festado" name="festado" class="estado-1" required>
+                                <option value="">Seleccione tipo</option>
+                                <option value="empresa">Empresa</option>
+                                <option value="desarrollador">Desarrollador</option>
+                            </select>
                         </label>
                         <label for="fuser" class="form__label--2">
-                            <input type="text" id="fuser" name="fuser"  class="user" placeholder="Usuario" autocomplete="username" required>
+                            <input type="text" id="fuser" name="fuser"  class="user" placeholder="Usuario o correo" autocomplete="username" required>
                         </label>
                         <label for="fpassword" class="form__label--3">
                             <input type="password" id="fpassword" name="fpassword"  class="password" placeholder="************" autocomplete="new-password" required>
@@ -52,8 +53,8 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <header>
+        <footer class="footer-login">
+            <!--<header>
                 <nav class="navigator">
                     <ul class="navigator-list">
                         <li class="navigator-item"><a href="./index.html">Inicio</a></li>
@@ -63,7 +64,7 @@
                         <li class="navigator-item"><a href="./blog.html">Blog</a></li>
                     </ul>
                 </nav>
-            </header>
+            </header>-->
             <div class="social">
                 <div class="social-container">
                     <figure class="social-item">
@@ -89,8 +90,9 @@
                 </div>
             </div>
             <div class="end">
-                <span>Desarrollado por &copy;DevJuniors  2024</span>
+                <span>Desarrollado por &copy;DSIJuniors  2025</span>
             </div>
         </footer>
+        <script src="./JS/login-register.js" id="login-register-script"></script>
     </body>
 </html>

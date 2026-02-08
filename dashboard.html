@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>DSIJuniors | Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/chatbot.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="logo">DSIJuniors</div>
+            <nav class="menu">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="perfil.html">Mi Perfil</a>
+                <button id="btnChat">Chat</button>
+                <button id="logout">Cerrar sesión</button>
+            </nav>
+        </header>
+
+        <div class="layout">
+            <aside id="sidebar" class="sidebar">
+                <h2>Usuario</h2>
+                <div id="userInfo"></div>
+            </aside>
+
+            <main class="content">
+
+                <section id="empresaPanel" class="panel hidden">
+                    <h2>Publicar oferta</h2>
+
+                    <div class="form-group">
+                        <label>Título del puesto</label>
+                        <input type="text" id="tituloOferta">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea id="descripcionOferta"></textarea>
+                    </div>
+
+                    <button id="btnPublicar">Publicar oferta</button>
+
+                    <h3>Postulaciones recibidas</h3>
+                    <div id="postulacionesEmpresa" class="grid"></div>
+
+                    <h3>Desarrolladores registrados</h3>
+                    <div id="listaDevs" class="grid"></div>
+                </section>
+
+                <section id="devPanel" class="panel hidden">
+                    <h2>Ofertas disponibles</h2>
+                    <div id="listaOfertas" class="grid"></div>
+
+                    <h2>Mis postulaciones</h2>
+                    <div id="misPostulaciones" class="grid"></div>
+                </section>
+
+                <section class="panel">
+                    <h2>Actividad general</h2>
+                    <canvas id="graficoActividad"></canvas>
+                </section>
+
+            </main>
+        </div>
+
+        <div id="chatModal" class="chat-modal hidden">
+            <div class="chat-header">
+                <span>Chat DSIJuniors</span>
+                <button id="cerrarChat">✖</button>
+            </div>
+            <div id="chatMensajes" class="chat-body"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Escribe un mensaje...">
+                <button id="enviarChat">Enviar</button>
+            </div>
+        </div>
+
+        <script src="JS/chatbot.js"></script>
+        <script src="JS/dashboard.js"></script>
+    </body>
+</html>

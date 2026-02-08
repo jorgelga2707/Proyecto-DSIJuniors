@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "Admin",
+    "apellido": "Empresa",
+    "email": "admin@empresa.com",
+    "usuario": "adminempresa",
+    "pass": "123456",
+    "tipoCuenta": "Empresa",
+    "infoExtra": {
+      "empresa": "DSI Corp",
+      "ruc": "20123456789",
+      "sector": "Tecnología",
+      "descripcion": "Empresa de desarrollo de software"
+    }
+  },
+  {
+    "id": 2,
+    "nombre": "Admin",
+    "apellido": "Dev",
+    "email": "admin@dev.com",
+    "usuario": "admindev",
+    "pass": "123456",
+    "tipoCuenta": "Desarrollador",
+    "infoExtra": {
+      "experiencia": "2 a 3 años",
+      "especializacion": "Fullstack",
+      "lenguajes": ["JavaScript", "Python", "C#"],
+      "bio": "Desarrollador web"
+    }
+  }
+]
