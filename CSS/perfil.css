@@ -132,3 +132,140 @@ textarea {
   background: linear-gradient(90deg,#3ab7ff,#ec4899);
   color:#020617;
 }
+
+@media (max-width: 1024px) {
+
+  .perfil-card {
+    padding: 35px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .topbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .perfil-container {
+    padding: 30px 15px;
+  }
+
+  .perfil-card {
+    padding: 30px 20px;
+  }
+
+  .perfil-card .titulo {
+    font-size: 1.6rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .perfil-card {
+    padding: 25px 15px;
+  }
+
+  input,
+  textarea {
+    font-size: .9rem;
+  }
+
+  .btn-guardar {
+    font-size: .9rem;
+    padding: 13px;
+  }
+
+}
+
+
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+    width: 100%;
+}
+
+.perfil-card {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 480px) {
+    .perfil-card {
+        padding: 20px;
+    }
+    
+    .perfil-card .titulo {
+        font-size: 1.5rem;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #3ab7ff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 70%;
+        height: 100vh;
+        background: rgba(11, 18, 37, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transition: 0.4s ease;
+        z-index: 1000;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

@@ -10,8 +10,16 @@
     <body>
         <header class="topbar">
             <div class="logo">DSIJuniors</div>
-            <nav class="menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="menu" id="navMenu">
                 <a href="dashboard.html">Dashboard</a>
+                <a href="perfil.html">Mi Perfil</a>
+                <button id="btnChat">Chat</button>
                 <button id="logout">Cerrar sesión</button>
             </nav>
         </header>
@@ -43,5 +51,6 @@
             </div>
         </main>
         <script src="JS/perfil.js"></script>
+        <script src="./JS/menu.js"></script>
     </body>
 </html>

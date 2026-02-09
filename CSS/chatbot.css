@@ -96,3 +96,60 @@
   font-weight: bold;
   color: #020617;
 }
+
+@media (max-width: 768px) {
+
+  .chat-modal {
+    width: 92%;
+    height: 75vh;
+    right: 4%;
+    bottom: 15px;
+    border-radius: 18px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .chat-modal {
+    width: 96%;
+    height: 80vh;
+    right: 2%;
+    bottom: 10px;
+  }
+
+  .chat-header {
+    padding: 14px;
+    font-size: .9rem;
+  }
+
+  .msg {
+    max-width: 85%;
+    font-size: .8rem;
+  }
+
+  .chat-input button {
+    padding: 0 15px;
+  }
+
+}
+
+.chat-modal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    max-width: 90vw;
+    height: 450px;
+    max-height: 70vh;
+    z-index: 2000;
+}
+
+@media (max-width: 480px) {
+    .chat-modal {
+        right: 5%;
+        left: 5%;
+        bottom: 10px;
+        width: 90%;
+    }
+}
